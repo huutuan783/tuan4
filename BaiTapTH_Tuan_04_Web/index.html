@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper_flex_center {
+            display: flex;
+            justify-content: center;
+        }
+        .wrapper_flex_right {
+            display: flex;
+            justify-content: right;
+        }
+        
+        #container {
+            display: flex;
+            width: 1440px;
+        }
+        
+        #center {
+            display: flex;
+            flex-direction: column;
+            width: 910px;
+            margin-inline: 10px;
+        }
+        
+        #right {
+            width: 440px;
+            height: 870px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #left {
+            width: 90px;
+            height: 870px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        #left_above {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #below {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .item {
+            width: 32px;
+            margin-top: 50px;
+        }
+        .item_center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .item_margin{
+            margin-right: 10px;
+        }
+        #setting {
+            margin-top: 36px;
+        }
+        
+        #Logo {
+            width: auto;
+        }
+        
+        .column_line {
+            padding-right: 10px;
+            border-right: 0.1px solid rgba(0, 0, 0, 0.2);
+            height: 870px;
+        }
+        #center_top_title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #center_top_time{
+            display: flex;
+            justify-content: start;
+            margin-bottom: 20px;
+        }
+        #recording_time{
+            display:flex;
+            border: 2px solid rgb(234, 97, 97);
+            border-radius: 20px;
+            width: 80px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            color: rgb(234, 97, 97);
+            
+        }
+        #internal_button{
+            display: flex;
+            width: 90px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: rgb(234, 97, 97);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 15px;
+        }
+        #center_mid{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .display_screen{
+            position: relative;
+            width: 100%;
+        }
+        .radius_img{
+            border-radius: 5px;
+            width: 100%;
+        }
+        .greenText{
+            color: lime;
+            margin-right: 10px;
+        }
+        .online_name{
+            background-color: grey;
+            position: absolute;
+            left: 2%;
+            top: 2%;
+            display: flex;
+            height: auto;
+            width: auto;
+            color: white;
+            padding: 5px 10px 5px 5px;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+        .voice_button{
+            position: absolute;
+            top: 2%;
+            right: 2%;
+        }
+        #end_meeting_button{
+            display: flex;
+            width: 120px;
+            height: 44px;
+            border-radius: 5px;
+            background-color: rgb(234, 97, 97);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 15px;
+        }
+        .user_button{
+            margin: 1%;
+        }
+        #add_button{
+            display:flex;
+            border: 2px solid rgb(234, 97, 97);
+            border-radius: 5px;
+            width: 70px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            color: rgb(234, 97, 97);
+        }
+        #white_red_text{
+            color: rgb(234, 97, 97);
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        .avatar_with_name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+        .warpper_flex_space_between{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px;
+        }
+        #right_top{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrapper_flex_center">
+        <div id="container">
+            <div id="left" class="column_line">
+                <div id="left_above">
+                    <img class="Logo" src="image/logo.png" alt="">
+                    <img class="item" src="image/home.png" alt="">
+                    <img class="item" src="image/chatting.png" alt="">
+                    <img class="item" src="image/calender.png" alt="">
+                    <img class="item" src="image/cam.png" id="" alt="">
+                    <img class="item" src="pimage/user.png" id="" alt="">
+                </div>
+
+                <div id="below">
+                    <img src="image/avatar.png" width="44" alt="">
+                    <img id="setting" src="image/setting.png" width="60" alt="">
+                </div>
+            </div>
+            <div id="center">
+                <div id = "center_top_title">
+                    <h1>Meeting title</h1>
+                    <div id = "recording_time">&#x25cf; 12:00</div>
+                </div>
+                <div id = "center_top_time">
+                    <div id="internal_button" class="item_center"><img src="image/user.png" alt="" width="20px">Internal</div>
+                    <div class="item_center"><img src="image/calender_small.png" alt="">Sep 02, 2022</div>
+                    <div class="item_center">08:00 - 09:00 AM</div>
+                </div>
+                <div id = "center_mid">
+                <div class="display_screen" >
+                <div id="big_img" >
+                    <img src="image/img_big.png" alt="" height="500px"  class="radius_img">
+                </div>
+                <div class="online_name"><div class="greenText">&#x25cf;</div> Benjamin Crawford</div>
+                <div>
+                    <img src="image/mic_color.png" alt="" class="voice_button">
+                </div>
+                </div>
+                
+            </div>
+            <div class="wrapper_flex_center" id="center_mid_small_display">
+                <div class="display_screen">
+                    <div id="img" >
+                        <img src="image/img2.png" alt=""  class="radius_img">
+                    </div>
+                    <div class="online_name"><div class="greenText">&#x25cf;</div> Christian Scott</div>
+                    <div>
+                        <img src="image/mic_grey_color.png" alt="" class="voice_button">
+                    </div>
+                </div>
+                <div class="display_screen">
+                    <div id="img1" >
+                        <img src="image/img1.png" alt=""  class="radius_img">
+                    </div>
+                    <div class="online_name"><div class="greenText">&#x25cf;</div> Deborah Chu</div>
+                    <div>
+                        <img src="image/mic_grey_color.png" alt="" class="voice_button">
+                    </div>
+                </div>
+                <div class="display_screen">
+                    <div id="img2" >
+                        <img src="image/img.png" alt=""  class="radius_img">
+                    </div>
+                    <div class="online_name"><div class="greenText">&#x25cf;</div> Joran Nieves</div>
+                    <div>
+                        <img src="image/mic_grey_color.png" alt="" class="voice_button">
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper_flex_center" id="center_bot">
+                <div class="user_button"><img src="image/mic_grey_color.png" alt=""></div>
+                <div class="user_button"><img src="image/cam_color.png" alt=""></div>
+                <div class="user_button"><img src="image/speaker_grey_color.png" alt=""></div>
+                <div class="user_button" id="end_meeting_button">End meeting</div>
+                <div class="user_button"><img src="image/Button 2179.png" alt=""></div>
+                <div class="user_button"><img src="image/share.png" alt=""></div>
+                <div class="user_button"><img src="image/ellipsis.png" alt=""></div>
+            </div>
+            </div>
+            <div id="right">
+                <div id="right_top">
+                    <div id="Participants title" class="warpper_flex_space_between">
+                        <h2 id="Participants_title">Participants<p id="white_red_text">4</p></h2>
+                        
+                        <div id="add_button">+  Add</div>
+                    </div>
+                    <div class="warpper_flex_space_between">
+                        <div class="avatar_with_name">
+                            <img src="image/avatar 1322.png" alt="">
+                            <div>Benjamin Crawdord</div>
+                        </div>
+                        <div>
+                            <img src="image/mic1.png" alt="">
+                            <img src="image/cam_small.png" alt="">
+                            <span class="ellipsis">•••</span>
+                        </div>
+                    </div>
+                    <div class="warpper_flex_space_between">
+                        <div class="avatar_with_name">
+                            <img src="image/avatar 1323.png" alt="">
+                            <div>Christian Scott</div>
+                        </div>
+                        <div>
+                            <img src="image/mic1.png" alt="">
+                            <img src="image/cam_small.png" alt="">
+                            <span class="ellipsis">•••</span>
+                        </div>
+                    </div>
+                    <div class="warpper_flex_space_between">
+                        <div class="avatar_with_name">
+                            <img src="imagimagee/avatar 1324.png" alt="">
+                            <div>Deborah Chu</div>
+                        </div>
+                        <div>
+                            <img src="image/mic2.png" alt="">
+                            <img src="imagepicture/cam_small.png" alt="">
+                            <span class="ellipsis">•••</span>
+                        </div>
+                    </div>
+                    <div class="warpper_flex_space_between">
+                        <div class="avatar_with_name">
+                            <img src="image/avatar 1325.png" alt="">
+                            <div>Joran Nieves</div>
+                        </div>
+                        <div>
+                            <img src="image/mic1.png" alt="">
+                            <img src="image/cam_small.png" alt="">
+                            <span class="ellipsis">•••</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+
+    </div>
+
+</body>
+
+</html>
